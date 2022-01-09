@@ -43,6 +43,14 @@ function perimetroTriangulo(ladot1, ladot2, base) {
 function areaTriangulo(base, htriangle) {
     return (base * htriangle) / 2;
 };
+
+function hTriangulo(lado1, lado2, base) {
+    if (lado1!==lado2){
+        alert("Triangulo no es Isoceles")
+    }else {
+        return (Math.sqrt((lado1 * lado2) - ((base * base) / 4)));
+    }
+};
 // console.log("El area del triangulo mide:" + areaTriangulo + "cm2");
 
 console.groupEnd();
@@ -127,6 +135,21 @@ function calcularAreaTriangulo(){
 
     const areaTriangle = areaTriangulo(value4, value3);
     alert(areaTriangle);
+}
+
+
+function calcularHTriangulo(){
+    const input1 = document.getElementById("inputTriangulo1");
+    const input2 = document.getElementById("inputTriangulo2");
+    const input3 = document.getElementById("inputTriangulo3");
+
+    const value1 = Number(input1.value);
+    const value2 = Number(input2.value);
+    const value3 = Number(input3.value);
+    
+
+    const hTriangle = hTriangulo(value1, value2, value3);
+    alert(hTriangle);
 }
 
 function calcularDiametroCirculo(){
